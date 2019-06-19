@@ -35,7 +35,7 @@ function requestApi(url){
             let poster = 'http://image.tmdb.org/t/p/w185/'+item.poster_path;
             let overview = item.overview;
             console.log(nameItem);
-            inner += '<div class = "col-10" style="margin-bottom: 30px; border: 1px solid #e3e3e3; padding: 0px;">'+'<div class = "image-content"><img = src="'+poster+'" alt="Poster" class="float-left" style="margin-right: 20px;" ></img></div>'+'<div class = "info" style="padding-top: 10px;"><h5>'+nameItem+'</h5>'+'<p>'+releaseDate+'</p>'+'<p>'+overview+'</p></div>'+'</div>';
+            inner += '<div class = "col-10" style="margin-bottom: 30px; border: 1px solid #e3e3e3; padding: 0px;">'+'<div class = "image-content"><img id = "poster" src="'+poster+'" alt="Poster" class="float-left" style="margin-right: 20px; width:185px;" onerror="this.src=`https://www.isteducation.com/wp-content/plugins/learnpress/assets/images/no-image.png`;" ></img></div>'+'<div class = "info" style="padding-top: 10px;"><h5>'+nameItem+'</h5>'+'<p>'+releaseDate+'</p>'+'<p>'+overview+'</p></div>'+'</div>';
         });
         movie.innerHTML = inner;
     
